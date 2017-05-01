@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:id="@+id/group_main"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_main"
+            android:icon="@drawable/ic_main_activity"
+            android:title="@string/main" />
+    </group>
+    <group android:id="@+id/group_menu"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_report"
+            android:icon="@drawable/ic_report_activity"
+            android:title="@string/report_harassment" />
+        <item
+            android:id="@+id/nav_view_reports"
+            android:icon="@drawable/ic_view_reports_activity"
+            android:title="@string/view_reports" />
+        <item
+            android:id="@+id/nav_view_reports_map"
+            android:icon="@drawable/ic_view_map_activity"
+            android:title="@string/view_reports_map" />
+        </group>
+    <group android:id="@+id/group_extra"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_config"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="@string/config" />
+        <item
+            android:id="@+id/nav_contact"
+            android:icon="@drawable/ic_menu_send"
+            android:title="@string/contactus" />
+    </group>
+    <group android:id="@+id/group_about_us"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_about_us"
+            android:icon="@drawable/ic_info_black_24dp"
+            android:title="@string/aboutus" />
+    </group>
+
+</menu>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    >
+
+    <TextView
+        android:layout_width="160dp"
+        android:layout_height="30dp"
+        android:layout_alignParentLeft="true"
+        android:text="Nume"
+        android:gravity="center"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:id="@+id/tx_nume"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="Hartuire:"
+        android:layout_toRightOf="@+id/tx_nume"
+        android:gravity="center"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:id="@+id/tx_hartuire"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:text="Mesaj"
+        android:layout_below="@+id/tx_hartuire"
+        android:gravity="center"
+        android:textAppearance="?android:textAppearanceSmall"
+        android:id="@+id/tx_mesaj"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="locatie"
+        android:layout_below="@+id/tx_mesaj"
+        android:gravity="center"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:id="@+id/tx_locatie"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:divider="@drawable/divider"
+        android:dividerPadding="12dip"
+        android:layout_below="@+id/tx_locatie"
+        android:showDividers="middle"
+        android:background="#ff2d2d2d" ></LinearLayout>
+</RelativeLayout>
