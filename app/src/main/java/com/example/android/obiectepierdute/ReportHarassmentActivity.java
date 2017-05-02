@@ -45,7 +45,7 @@ public class ReportHarassmentActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
         nume = (EditText)findViewById(R.id.nume);
-        tip_obj =(RadioGroup)findViewById(R.id.tip_raportare);
+        tip_obj =(RadioGroup)findViewById(R.id.tip_obiect);
         obiect = (EditText)findViewById(R.id.numeObiect);
         descriere = (TextView)findViewById(R.id.descriereObiect);
         locatie = (EditText)findViewById(R.id.location);
@@ -91,10 +91,11 @@ public class ReportHarassmentActivity extends AppCompatActivity
                     s_obiect = obiect.getText().toString().trim();
                     s_descriere = descriere.getText().toString();
                     s_locatie = locatie.getText().toString().trim();
+                    s_mail = mail.getText().toString().trim();
                     s_nr_tel = nr_tel.getText().toString().trim();
                     String method = "register";
                     BackgroundDatabaseTask backgroundTask = new BackgroundDatabaseTask(this);
-                    backgroundTask.execute(method, s_nume, s_tip_obj, s_obiect , s_descriere, s_locatie, s_nr_tel);
+                    backgroundTask.execute(method, s_nume, s_tip_obj, s_obiect , s_descriere, s_locatie, s_mail, s_nr_tel);
                     finish();
                 } catch (Exception e) {
                     Toast.makeText(this, e.getMessage() , Toast.LENGTH_SHORT).show();

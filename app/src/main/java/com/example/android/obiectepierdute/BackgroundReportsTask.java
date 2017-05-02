@@ -25,7 +25,7 @@ public class BackgroundReportsTask extends AsyncTask<String,Void,String> {
     @Override
     protected String doInBackground(String... params) {
 
-        String rer_url="http://192.168.1.5/php-crud-api-master/extras/core.php/raportari";
+        String rer_url="http://34.205.211.253/obiecte-pierdute/core.php/obiecte";
         String method= params[0];
         if(method.equals("register")) {
 

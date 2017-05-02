@@ -15,6 +15,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -72,7 +73,7 @@ public class ViewReportsActivity extends AppCompatActivity
         reportAdapter= new ReportAdapter(this,R.layout.report_layout);
         listView= (ListView) findViewById(R.id.listview);
         listView.setAdapter(reportAdapter);
-        String nume,hartuire,mesaj,locatie,email,utilizator,privacy;
+        String nume,tip_obiect,obiect,descriere,locatie,email,nr_tel;
         try {
             /*jsonObject= new JSONObject(jsonString);
             jsonArray= jsonObject.getJSONArray("server_response");*/
@@ -82,18 +83,19 @@ public class ViewReportsActivity extends AppCompatActivity
             while (count < arrayLenght) {
                 JSONObject JO= jsonArray.getJSONObject(count);
                 nume= JO.getString("nume");
-                hartuire= JO.getString("hartuire");
-                mesaj= JO.getString("mesaj");
+                tip_obiect= JO.getString("tip_obiect");
+                obiect= JO.getString("nume_obiect");
+                descriere= JO.getString("descriere");
                 locatie= JO.getString("locatie");
                 email= JO.getString("email");
-                utilizator= JO.getString("utilizator");
-                privacy= JO.getString("privacy");
-                Report report= new Report(nume,hartuire,mesaj,locatie,email,utilizator,privacy);
+                nr_tel= JO.getString("nr_tel");
+                Report report= new Report(nume,tip_obiect,obiect,descriere,locatie,email,nr_tel);
                 reportAdapter.add(report);
                 count++;
             }
         } catch (Exception e) {
             e.printStackTrace();
+            Toast.makeText(this, e.getMessage() , Toast.LENGTH_LONG).show();
             /*textView.setText(e.getMessage());*/
         }
 
@@ -167,7 +169,7 @@ public class ViewReportsActivity extends AppCompatActivity
 
     class BackgroundTask extends AsyncTask<Void,Void,String> {
 
-        String jsonUrl= "http://34.205.211.253/anaisapp/core.php/raportari";
+        String jsonUrl= "http://34.205.211.253/obiecte-pierdute/core.php/obiecte";
         @Override
         protected String doInBackground(Void... params) {
             try {

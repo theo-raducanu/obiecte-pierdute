@@ -45,9 +45,12 @@ public class ReportAdapter extends ArrayAdapter {
             reportHolder= new ReportHolder();
 
             reportHolder.tx_nume = (TextView) row.findViewById(R.id.tx_nume);
-            reportHolder.tx_hartuire = (TextView) row.findViewById(R.id.tx_hartuire);
-            reportHolder.tx_mesaj = (TextView) row.findViewById(R.id.tx_mesaj);
+            reportHolder.tx_tip_obj = (TextView) row.findViewById(R.id.tx_tip_obj);
+            /*reportHolder.tx_obiect = (TextView) row.findViewById(R.id.tx_obiect);*/
+            reportHolder.tx_descriere = (TextView) row.findViewById(R.id.tx_descriere);
             reportHolder.tx_locatie = (TextView) row.findViewById(R.id.tx_locatie);
+            /*reportHolder.tx_email = (TextView) row.findViewById(R.id.tx_email);*/
+            /*reportHolder.tx_nr_tel = (TextView) row.findViewById(R.id.tx_email);*/
             row.setTag(reportHolder);
         } else {
             reportHolder= (ReportHolder) row.getTag();
@@ -55,15 +58,18 @@ public class ReportAdapter extends ArrayAdapter {
 
         Report report= (Report) this.getItem(position);
         reportHolder.tx_nume.setText(report.getNume());
-        reportHolder.tx_hartuire.setText(report.getHartuire());
-        reportHolder.tx_mesaj.setText(report.getMesaj());
+        reportHolder.tx_tip_obj.setText(report.getTip());
+        /*reportHolder.tx_obiect.setText(report.getObiect());*/
+        reportHolder.tx_descriere.setText(report.getDescriere());
         reportHolder.tx_locatie.setText(report.getLocatie());
+        /*reportHolder.tx_email.setText(report.getEmail());*/
+        /*reportHolder.tx_nr_tel.setText(report.getNrTel());*/
         return row;
     }
 
     static class ReportHolder{
 
-        TextView tx_nume, tx_hartuire, tx_mesaj, tx_locatie, tx_email, tx_utilizator, tx_privacy;
+        TextView tx_nume, tx_tip_obj, tx_obiect, tx_descriere, tx_locatie, tx_email, tx_nr_tel;
 
     }
 }

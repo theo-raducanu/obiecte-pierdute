@@ -25,17 +25,17 @@ public class BackgroundDatabaseTask extends AsyncTask<String,Void,String> {
     @Override
     protected String doInBackground(String... params) {
 
-        String rer_url="http://34.205.211.253/anaisapp/core.php/raportari";
+        String rer_url="http://34.205.211.253/obiecte-pierdute/core.php/obiecte";
         String method= params[0];
         if(method.equals("register")) {
 
             String nume = params[1];
-            String hartuire = params[2];
-            String mesaj = params[3];
-            String locatie = params[4];
-            String email = params[5];
-            String utilizator = params[6];
-            String privacy = params[7];
+            String tip_obiect = params[2];
+            String nume_obiect = params[3];
+            String descriere = params[4];
+            String locatie = params[5];
+            String email = params[6];
+            String nr_tel = params[7];
 
             OutputStream os = null;
             InputStream is = null;
@@ -45,12 +45,12 @@ public class BackgroundDatabaseTask extends AsyncTask<String,Void,String> {
                 URL url = new URL(rer_url);
                 JSONObject jsonObject = new JSONObject();
                 jsonObject.put("nume", nume);
-                jsonObject.put("hartuire", hartuire);
-                jsonObject.put("mesaj", mesaj);
+                jsonObject.put("tip_obiect", tip_obiect);
+                jsonObject.put("nume_obiect", nume_obiect);
+                jsonObject.put("descriere", descriere);
                 jsonObject.put("locatie", locatie);
                 jsonObject.put("email", email);
-                jsonObject.put("utilizator", utilizator);
-                jsonObject.put("privacy", privacy);
+                jsonObject.put("nr_tel", nr_tel);
                 String message = jsonObject.toString();
 
                 conn = (HttpURLConnection) url.openConnection();

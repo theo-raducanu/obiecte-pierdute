@@ -10,84 +10,18 @@
 
     <EditText
         android:id="@+id/nume"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:ems="10"
         android:hint="Nume si prenume *"
         android:inputType="textCapWords|textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/tip_raportare"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.227" />
-
-
-    <RadioGroup
-        android:id="@+id/tip_raportare"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_marginLeft="0dp"
-        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        app:layout_constraintLeft_toRightOf="@+id/privacy"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nume"
-        app:layout_constraintVertical_bias="0.227">
+        app:layout_constraintHorizontal_bias="0.0" />
 
-        <TextView
-            android:id="@+id/textView1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Raporteaza *"
-            tools:layout_editor_absoluteX="142dp"
-            tools:layout_editor_absoluteY="205dp" />
-
-        <RadioButton
-            android:id="@+id/pierdut"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Obiect pierdut" />
-
-        <RadioButton
-            android:id="@+id/gasit"
-            android:layout_width="match_parent"
-            android:layout_height="42dp"
-            android:text="Obiect gasit" />
-    </RadioGroup>
-
-    <RadioGroup
-        android:id="@+id/privacy"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:visibility="gone"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@+id/tip_raportare"
-        app:layout_constraintTop_toBottomOf="@+id/nume">
-
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Cum doriti sa publicati *"
-            tools:layout_editor_absoluteX="142dp"
-            tools:layout_editor_absoluteY="205dp" />
-
-        <RadioButton
-            android:id="@+id/publiic"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Public" />
-
-        <RadioButton
-            android:id="@+id/privat"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Privat" />
-
-    </RadioGroup>
 
     <Spinner
         android:id="@+id/selectHartuire"
@@ -97,14 +31,14 @@
         android:entries="@array/harassment_arrays"
         android:prompt="@string/harassment_prompt"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tip_raportare"
+        app:layout_constraintTop_toBottomOf="@+id/descriereObiect"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintVertical_bias="0.053" />
 
     <EditText
         android:id="@+id/descriereObiect"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="75dp"
         android:layout_marginTop="8dp"
         android:ems="10"
@@ -114,11 +48,12 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/numeObiect"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintVertical_bias="0.34" />
 
     <EditText
         android:id="@+id/location"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="49dp"
         android:ems="10"
         android:hint="Locatia *"
@@ -127,11 +62,12 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/descriereObiect"
-        app:layout_constraintVertical_bias="0.106" />
+        app:layout_constraintVertical_bias="0.107"
+        app:layout_constraintHorizontal_bias="0.0" />
 
     <EditText
         android:id="@+id/email"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:ems="10"
@@ -155,25 +91,21 @@
 
     <EditText
         android:id="@+id/numeObiect"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="0dp"
-        android:layout_marginRight="0dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="17dp"
         android:ems="10"
         android:hint="Numele obiectului *"
         android:inputType="textCapSentences|textPersonName"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tip_raportare"
-        app:layout_constraintVertical_bias="0.227" />
+        app:layout_constraintTop_toBottomOf="@+id/nume"
+        app:layout_constraintHorizontal_bias="0.0" />
 
     <EditText
         android:id="@+id/nrTelefon"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="0dp"
-        android:layout_marginRight="0dp"
         android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="Numar de telefon *"
@@ -181,6 +113,40 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/email" />
+
+    <RadioGroup
+        android:id="@+id/tip_obiect"
+        android:layout_width="368dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="73dp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nume">
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Raporteaza *"
+            tools:layout_editor_absoluteX="142dp"
+            tools:layout_editor_absoluteY="205dp" />
+
+        <RadioButton
+            android:id="@+id/pierdut"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Obiect pierdut" />
+
+        <RadioButton
+            android:id="@+id/gasit"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:text="Obiect gasit" />
+    </RadioGroup>
 
 
 </android.support.constraint.ConstraintLayout>
