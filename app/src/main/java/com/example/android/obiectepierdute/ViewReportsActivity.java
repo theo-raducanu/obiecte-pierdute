@@ -1,9 +1,12 @@
 package com.example.android.obiectepierdute;
 
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.v4.app.ActivityCompat;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -38,6 +41,7 @@ public class ViewReportsActivity extends AppCompatActivity
     JSONObject jsonObject;
     ReportAdapter reportAdapter;
     ListView listView;
+
     public void getJson(View view) {
 
         /*new BackgroundTask().execute();*/
@@ -46,6 +50,47 @@ public class ViewReportsActivity extends AppCompatActivity
 
     public void parseJson(View view) {
 
+    }
+
+    public void openLocation(View v) {
+        View parentRow = (View) v.getParent();
+        ListView listView = (ListView) parentRow.getParent();
+        final int position = listView.getPositionForView(parentRow);
+        ListView reportList = (ListView) findViewById(R.id.listview);
+        ReportAdapter hListAdapter = (ReportAdapter) reportList.getAdapter();
+        Report reportDetails = (Report) hListAdapter.getItem(position);
+        Uri locationUri = Uri.parse("geo:44.4356554,26.1009694?q=" + reportDetails.getLocatie());
+        Intent mapIntent = new Intent(Intent.ACTION_VIEW, locationUri);
+        mapIntent.setPackage("com.google.android.apps.maps");
+        startActivity(mapIntent);
+    }
+
+    public void openCall(View v) {
+        View parentRow = (View) v.getParent();
+        ListView listView = (ListView) parentRow.getParent();
+        final int position = listView.getPositionForView(parentRow);
+        ListView reportList = (ListView) findViewById(R.id.listview);
+        ReportAdapter hListAdapter = (ReportAdapter) reportList.getAdapter();
+        Report reportDetails = (Report) hListAdapter.getItem(position);
+        String nr_tel = "tel:" + reportDetails.getNrTel();
+        Intent callIntent = new Intent(Intent.ACTION_CALL);
+        callIntent.setData(Uri.parse(nr_tel));
+        startActivity(callIntent);
+
+    }
+
+    public void openMail(View v) {
+        View parentRow = (View) v.getParent();
+        ListView listView = (ListView) parentRow.getParent();
+        final int position = listView.getPositionForView(parentRow);
+        ListView reportList = (ListView) findViewById(R.id.listview);
+        ReportAdapter hListAdapter = (ReportAdapter) reportList.getAdapter();
+        Report reportDetails = (Report) hListAdapter.getItem(position);
+        String email = reportDetails.getEmail();
+        Intent emailIntent = new Intent(Intent.ACTION_SEND);
+        emailIntent.setType("text/plain");
+        emailIntent.putExtra(Intent.EXTRA_EMAIL, new String[] { email });
+        startActivity(emailIntent);
     }
 
     @Override
@@ -100,18 +145,18 @@ public class ViewReportsActivity extends AppCompatActivity
             /*textView.setText(e.getMessage());*/
         }
 
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        /*listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                ListView harassmentList = (ListView) findViewById(R.id.listview);
-                ReportAdapter hListAdapter = (ReportAdapter) harassmentList.getAdapter();
-                Report harassmentDetails = (Report) hListAdapter.getItem(position);
-                Uri locationUri = Uri.parse("geo:44.4356554,26.1009694?q=" + harassmentDetails.getLocatie());
+                ListView reportList = (ListView) findViewById(R.id.listview);
+                ReportAdapter hListAdapter = (ReportAdapter) reportList.getAdapter();
+                Report reportDetails = (Report) hListAdapter.getItem(position);
+                Uri locationUri = Uri.parse("geo:44.4356554,26.1009694?q=" + reportDetails.getLocatie());
                 Intent mapIntent = new Intent(Intent.ACTION_VIEW,locationUri);
                 mapIntent.setPackage("com.google.android.apps.maps");
                 startActivity(mapIntent);
             }
-        });
+        });*/
 
     }
 
