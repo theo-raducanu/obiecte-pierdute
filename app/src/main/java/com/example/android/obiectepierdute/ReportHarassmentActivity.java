@@ -22,13 +22,11 @@ import android.widget.Toast;
 public class ReportHarassmentActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    private Spinner spinner1;
     private Button btnSubmit;
-    private EditText nume, locatie;
-    private TextView mesaj, email;
-    private RadioGroup utilizator,privacy;
-    private Spinner hartuire;
-    private String s_hartuire, s_nume, s_mesaj, s_locatie, s_email, s_utilizator, s_privacy;
+    private EditText nume, locatie,obiect,nr_tel;
+    private TextView descriere;
+    private RadioGroup tip_obj;
+    private String s_nume, s_tip_obj, s_obiect , s_descriere, s_locatie ,s_nr_tel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,14 +45,15 @@ public class ReportHarassmentActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
         nume = (EditText)findViewById(R.id.nume);
+        tip_obj =(RadioGroup)findViewById(R.id.tip_raportare);
+        obiect = (EditText)findViewById(R.id.numeObiect);
+        descriere = (TextView)findViewById(R.id.descriereObiect);
         locatie = (EditText)findViewById(R.id.location);
-        email = (TextView)findViewById(R.id.email);
-        mesaj = (TextView)findViewById(R.id.intamplare);
-        utilizator =(RadioGroup)findViewById(R.id.tip_utilizator);
-        privacy =(RadioGroup)findViewById(R.id.privacy);
-        hartuire = (Spinner)findViewById(R.id.selectHartuire);
+        nr_tel = (EditText)findViewById(R.id.nrTelefon);
 
-        addItemsOnSpinner();
+
+
+        //addItemsOnSpinner();
     }
 
     public void OnReport(View view){
@@ -64,45 +63,40 @@ public class ReportHarassmentActivity extends AppCompatActivity
             nume.setError("Numele si prenumele sunt obligatorii!");
             //Toast.makeText(getApplicationContext(), "Numele si prenumele sunt obligatorii!", Toast.LENGTH_LONG).show();
 
-        }else if(privacy.getCheckedRadioButtonId() == -1){
-
-            Toast.makeText(getApplicationContext(), "Alegeti cum doriti sa publicati", Toast.LENGTH_LONG).show();
-
-        }else if (utilizator.getCheckedRadioButtonId() == -1)
+        }else if (tip_obj.getCheckedRadioButtonId() == -1)
         {
-            Toast.makeText(getApplicationContext(), "Alegeti ce tip de utilizator sunteti", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "Alegeti tipul de raportare!", Toast.LENGTH_LONG).show();
 
-        }else if(String.valueOf(hartuire.getSelectedItem()).equals("Alege tipul de hartuire *")) {
+        }else if (obiect.getText().toString().trim().equals("")){
 
-            Toast.makeText(getApplicationContext(), "Alege tipul de hartuire", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "Numiti obiectul gasit / pierdut!", Toast.LENGTH_LONG).show();
+
+        }else if (nr_tel.getText().toString().trim().equals("")){
+
+            Toast.makeText(getApplicationContext(), "Adaugati un numar de telefon!", Toast.LENGTH_LONG).show();
 
         }else {
             if (locatie.getText().toString().trim().equals("")) {
 
-                //Locatie.setError("Introducerea locatiei e obligatorie!");
                 Toast.makeText(getApplicationContext(), "Introducerea locatiei e obligatorie!", Toast.LENGTH_LONG).show();
             } else {
                 //Introduc in DB
                 try {
-                    RadioButton radio = (RadioButton) utilizator.findViewById(utilizator.getCheckedRadioButtonId());
-                    s_utilizator = (radio.getText().equals("Victima") ) ? "Victima" : "Martor";
-                    radio = (RadioButton) privacy.findViewById(privacy.getCheckedRadioButtonId());
-                    s_privacy = (radio.getText().equals("Public") ) ? "Public" : "Privat";
-                    s_hartuire = String.valueOf(hartuire.getSelectedItem());
+                    RadioButton radio = (RadioButton) tip_obj.findViewById(tip_obj.getCheckedRadioButtonId());
+                    s_tip_obj = (radio.getText().equals("Obiect pierdut") ) ? "Obiect pierdut" : "Obiect gasit";
                     s_nume = nume.getText().toString().trim();
-                    s_mesaj = mesaj.getText().toString();
+                    s_obiect = obiect.getText().toString().trim();
+                    s_descriere = descriere.getText().toString();
                     s_locatie = locatie.getText().toString().trim();
-                    s_email = email.getText().toString();
+                    s_nr_tel = nr_tel.getText().toString().trim();
                     String method = "register";
                     BackgroundDatabaseTask backgroundTask = new BackgroundDatabaseTask(this);
-                    backgroundTask.execute(method, s_nume, s_hartuire, s_mesaj, s_locatie, s_email, s_utilizator, s_privacy);
+                    backgroundTask.execute(method, s_nume, s_tip_obj, s_obiect , s_descriere, s_locatie, s_nr_tel);
                     finish();
                 } catch (Exception e) {
                     Toast.makeText(this, e.getMessage() , Toast.LENGTH_SHORT).show();
                 }
 
-
-                //Toast.makeText(getApplicationContext(), "Felicitari", Toast.LENGTH_LONG).show();
 
 
                 Intent launchActivity1 = new Intent(ReportHarassmentActivity.this, MainActivity.class);
@@ -168,8 +162,8 @@ public class ReportHarassmentActivity extends AppCompatActivity
     }
 
 
-    public void addItemsOnSpinner() {
+    /*public void addItemsOnSpinner() {
         spinner1 = (Spinner) findViewById(R.id.selectHartuire);
-    }
+    }*/
 
 }

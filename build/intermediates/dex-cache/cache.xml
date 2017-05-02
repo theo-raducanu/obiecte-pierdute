@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="C:\Users\Andreea\AndroidStudioProjects\obiecte-pierdute\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="510aa6efc159983dfbffa676a0dae37568c0a46f">
+        <dex dex="C:\Users\Andreea\AndroidStudioProjects\obiecte-pierdute\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_d8ab954caa5f79bfad886e80d423f4a92b79e321\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Andreea\AndroidStudioProjects\obiecte-pierdute\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="57594aaece8ff0d424909ddbeade7d75aaa7bdd3">
+        <dex dex="C:\Users\Andreea\AndroidStudioProjects\obiecte-pierdute\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_dd82378e70e2861ac7d35b004ae5a0cd96cddb87\classes.dex" />
+    </item>
+
+</items>
