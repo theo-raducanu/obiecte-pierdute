@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Obiecte Pierdute</string>
     <string name="app_description">
-         Nu da uitarii obiectele care iti pasa !
+         Nu da uitarii obiectele pierdute !
     </string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
