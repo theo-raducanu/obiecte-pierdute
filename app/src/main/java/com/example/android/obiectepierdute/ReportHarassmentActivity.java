@@ -23,10 +23,10 @@ public class ReportHarassmentActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     private Button btnSubmit;
-    private EditText nume, locatie,obiect,nr_tel;
+    private EditText nume, locatie,obiect,nr_tel,mail;
     private TextView descriere;
     private RadioGroup tip_obj;
-    private String s_nume, s_tip_obj, s_obiect , s_descriere, s_locatie ,s_nr_tel;
+    private String s_nume, s_tip_obj, s_obiect , s_descriere, s_locatie ,s_mail ,s_nr_tel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,16 +49,15 @@ public class ReportHarassmentActivity extends AppCompatActivity
         obiect = (EditText)findViewById(R.id.numeObiect);
         descriere = (TextView)findViewById(R.id.descriereObiect);
         locatie = (EditText)findViewById(R.id.location);
+        mail = (EditText)findViewById(R.id.email);
         nr_tel = (EditText)findViewById(R.id.nrTelefon);
-
-
 
         //addItemsOnSpinner();
     }
 
     public void OnReport(View view){
 
-        if (nume.getText().toString().trim().equals("")) {
+       if (nume.getText().toString().trim().equals("")) {
 
             nume.setError("Numele si prenumele sunt obligatorii!");
             //Toast.makeText(getApplicationContext(), "Numele si prenumele sunt obligatorii!", Toast.LENGTH_LONG).show();
@@ -71,7 +70,11 @@ public class ReportHarassmentActivity extends AppCompatActivity
 
             Toast.makeText(getApplicationContext(), "Numiti obiectul gasit / pierdut!", Toast.LENGTH_LONG).show();
 
-        }else if (nr_tel.getText().toString().trim().equals("")){
+        }else if (mail.getText().toString().trim().equals("")){
+
+           Toast.makeText(getApplicationContext(), "Adaugati mail-ul", Toast.LENGTH_LONG).show();
+
+       }else if (nr_tel.getText().toString().trim().equals("")){
 
             Toast.makeText(getApplicationContext(), "Adaugati un numar de telefon!", Toast.LENGTH_LONG).show();
 
