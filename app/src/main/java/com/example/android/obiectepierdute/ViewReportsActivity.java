@@ -147,6 +147,8 @@ public class ViewReportsActivity extends AppCompatActivity
             /*textView.setText(e.getMessage());*/
         }
 
+
+
         /*listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -224,6 +226,7 @@ public class ViewReportsActivity extends AppCompatActivity
 
                 while ((jsonString= bufferedReader.readLine())!= null) {
                     stringBuilder.append(jsonString+"\n");
+
                 }
                 bufferedReader.close();
                 inputStream.close();

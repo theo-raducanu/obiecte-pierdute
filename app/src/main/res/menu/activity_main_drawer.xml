@@ -23,17 +23,7 @@
             android:icon="@drawable/ic_view_map_activity"
             android:title="@string/view_reports_map" />
         </group>
-    <group android:id="@+id/group_extra"
-        android:checkableBehavior="single">
-        <item
-            android:id="@+id/nav_config"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="@string/config" />
-        <item
-            android:id="@+id/nav_contact"
-            android:icon="@drawable/ic_menu_send"
-            android:title="@string/contactus" />
-    </group>
+
     <group android:id="@+id/group_about_us"
         android:checkableBehavior="single">
         <item

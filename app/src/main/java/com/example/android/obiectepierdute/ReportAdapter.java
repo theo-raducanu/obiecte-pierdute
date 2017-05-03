@@ -45,7 +45,7 @@ public class ReportAdapter extends ArrayAdapter {
             reportHolder= new ReportHolder();
 
             /*reportHolder.tx_nume = (TextView) row.findViewById(R.id.tx_nume);*/
-            /*reportHolder.tx_tip_obj = (TextView) row.findViewById(R.id.tx_tip_obj)*/;
+            reportHolder.tx_tip_obj = (TextView) row.findViewById(R.id.tx_tip_obj);
             reportHolder.tx_obiect = (TextView) row.findViewById(R.id.tx_obiect);
             reportHolder.tx_descriere = (TextView) row.findViewById(R.id.tx_descriere);
             reportHolder.tx_locatie = (TextView) row.findViewById(R.id.tx_locatie);
@@ -58,7 +58,7 @@ public class ReportAdapter extends ArrayAdapter {
 
         Report report= (Report) this.getItem(position);
         /*reportHolder.tx_nume.setText(report.getNume());*/
-        /*reportHolder.tx_tip_obj.setText(report.getTip());*/
+        reportHolder.tx_tip_obj.setText(report.getTip());
         reportHolder.tx_obiect.setText(report.getObiect());
         reportHolder.tx_descriere.setText(report.getDescriere());
         reportHolder.tx_locatie.setText(report.getLocatie());
