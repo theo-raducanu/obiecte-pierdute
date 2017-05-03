@@ -119,7 +119,7 @@ public class ViewReportsActivity extends AppCompatActivity
         reportAdapter= new ReportAdapter(this,R.layout.report_layout);
         listView= (ListView) findViewById(R.id.listview);
         listView.setAdapter(reportAdapter);
-        String nume,tip_obiect,obiect,descriere,locatie,email,nr_tel;
+        String nume,tip_obiect,obiect,descriere,locatie,email,nr_tel,latitude,longitude;
         try {
             /*jsonObject= new JSONObject(jsonString);
             jsonArray= jsonObject.getJSONArray("server_response");*/
@@ -135,7 +135,9 @@ public class ViewReportsActivity extends AppCompatActivity
                 locatie= JO.getString("locatie");
                 email= JO.getString("email");
                 nr_tel= JO.getString("nr_tel");
-                Report report= new Report(nume,tip_obiect,obiect,descriere,locatie,email,nr_tel);
+                latitude= JO.getString("latitude");
+                longitude= JO.getString("longitude");
+                Report report= new Report(nume,tip_obiect,obiect,descriere,locatie,email,nr_tel,latitude,longitude);
                 reportAdapter.add(report);
                 count++;
             }

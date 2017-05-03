@@ -6,9 +6,9 @@ package com.example.android.obiectepierdute;
 
 public class Report {
 
-    private String nume, tip_obiect, obiect, descriere, locatie, email, nr_tel;
+    private String nume, tip_obiect, obiect, descriere, locatie, email, nr_tel, latitude, longitude;
 
-    public Report(String nume, String tip_obiect, String obiect, String descriere, String locatie, String email, String nr_tel) {
+    public Report(String nume, String tip_obiect, String obiect, String descriere, String locatie, String email, String nr_tel, String latitude, String longitude) {
         this.setNume(nume);
         this.setTip(tip_obiect);
         this.setObiect(obiect);
@@ -73,4 +73,21 @@ public class Report {
     public void setNrTel(String nr_tel) {
         this.nr_tel = nr_tel;
     }
+
+    public String getLatitude() {
+        return latitude;
+    }
+
+    public void setLatitude(String latitude) {
+        this.latitude = latitude;
+    }
+
+    public String getLongitude() {
+        return longitude;
+    }
+
+    public void setLongitude(String longitude) {
+        this.longitude = longitude;
+    }
+
 }

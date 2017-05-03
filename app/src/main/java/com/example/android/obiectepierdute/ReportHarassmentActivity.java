@@ -19,6 +19,8 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.w3c.dom.Text;
+
 public class ReportHarassmentActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -99,9 +101,9 @@ public class ReportHarassmentActivity extends AppCompatActivity
                     finish();
                 } catch (Exception e) {
                     Toast.makeText(this, e.getMessage() , Toast.LENGTH_SHORT).show();
+                    TextView textView = (TextView) findViewById(R.id.textTest);
+                    textView.setText(e.getMessage());
                 }
-
-
 
                 Intent launchActivity1 = new Intent(ReportHarassmentActivity.this, MainActivity.class);
                 startActivity(launchActivity1);
