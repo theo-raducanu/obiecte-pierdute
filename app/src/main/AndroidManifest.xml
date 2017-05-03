@@ -28,14 +28,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name="com.example.android.obiectepierdute.DataConfigActivity"
-            android:label="@string/title_activity_data_config"
-            android:parentActivityName="com.example.android.obiectepierdute.MainActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.android.obiectepierdute.MainActivity" />
-        </activity>
+
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -73,14 +66,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.android.obiectepierdute.MainActivity" />
         </activity>
-        <activity
-            android:name="com.example.android.obiectepierdute.ContactUsActivity"
-            android:label="@string/title_activity_contact_us"
-            android:parentActivityName="com.example.android.obiectepierdute.MainActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.android.obiectepierdute.MainActivity" />
-        </activity>
+
         <activity
             android:name="com.example.android.obiectepierdute.HelpMainActivity"
             android:label="@string/title_activity_help_main"

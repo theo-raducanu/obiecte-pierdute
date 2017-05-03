@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">Obiecte Pierdute</string>
     <string name="app_description">
          Nu da uitarii obiectele pierdute !
@@ -7,11 +7,8 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
-    <string name="main_text">
-        \t\t\tCum se foloseste aplicatia Obiecte Pierdute?
-        \n\t\t\tDupa ce iti pierzi un obiect raportezi pierderea lui si speri ca il va gasi cineva .
-
-    </string>
+    <string name="main_text">\n\t\t\tDupa ce iti pierzi un obiect raportezi pierderea lui si speri ca il va gasi cineva .    </string>
+    <string name="main_text_title">Cum se foloseste aplicatia Obiecte Pierdute?</string>
 
     <string name="ong_text"> Aici va fi textul ales de cei din ANAIS</string>
 
@@ -25,66 +22,31 @@
     <string name="report_harassment">Raporteaza pierdere</string>
     <string name="view_reports">Obiecte Pierdute</string>
     <string name="view_reports_map">Harta obiecte pierdute</string>
-    <string name="config">Configurare Date</string>
-    <string name="contactus">Contacteaza-ne!</string>
-    <string name="aboutus">Despre noi</string>
+    <string name="aboutus">Despre aplicatie</string>
     <string name="title_activity_help_main">Descopera aplicatia noastra</string>
 
-    <string name="title_activity_data_config">Configurare Date</string>
 
     <!-- Strings related to Settings -->
 
     <!-- Example General settings -->
-    <string name="pref_header_general">General</string>
 
-    <string name="pref_title_social_recommendations">Cont Anonim</string>
-    <string name="pref_description_social_recommendations">Modul Anonim nu va impartasi date in legatura cu contul
-        tau, iar acest lucru iti nu iti va pune in niciun pericol integritatea
-    </string>
-
-    <string name="pref_title_display_name">Nume utilizator</string>
-    <string name="pref_default_display_name">Nume Prenume</string>
-
-    <string name="pref_title_add_friends_to_messages">ceva acolo</string>
-    <string-array name="pref_example_list_titles">
-        <item>Always</item>
-        <item>When possible</item>
-        <item>Never</item>
-    </string-array>
-    <string-array name="pref_example_list_values">
-        <item>1</item>
-        <item>0</item>
-        <item>-1</item>
-    </string-array>
 
     <!-- Help Messages -->
-    <string name="main_help_content">
-        \t\t\tDe ce o aplicatie pe hartuire stradala?
-Pentru ca noi credem ca e important sa fim conectati la ce (ni) se intampla si sa fim active/i, nu sa inchidem ochii atunci cand suntem victime sau martori/e la violenta. Daca suntem pe strada si observam o femeie hartuita de un grup de barbati, putem intra rapid pe aplicatie si povesti succint ce am vazut! Folosirea aplicatiei este un mod de a reactiona la hartuirea stradala, deoarece de multe ori, ne este prea teama sa luam atitudine in fata agresorilor dar asta nu inseamna ca am procedat corect.
-Cui ne adresam?
-Cetatenelor si cetatenilor din Bucuresti (a ramas ca aplicatie sa fie doar pt ce se intampla in bucuresti, nu?), care isi doresc sa ia atitudine impotriva abuzurilor si violentei in spatiul public.
-\n
-Ce ne propunem?
-Aplicatia de fata reprezinta un spatiu in care atat martorii, cat si victimele harturiii stradale pot lua atitudine si pot vorbi despre acest fenomen. Pentru victime este o resursa prin care se simt mai puternice, iar pentru martori este un instrument prin care isi pot manifesta solidaritatea si spiritul de interventie.
-Scopul nostru consta in strangerea de marturii de la martori si de la victime pentru a vedea ce se intampla in spatiul public si desigur, construirea unei comunitati care sa fie activa si sa nu tolereze hartuirea stradala.
-Ne dorim ca societatea sa devina mai sensibila si mai interesata cu privire la problema hartuirii stradale iar autoritatile, pe baza statisticilor oferite de aplicatie, sa poata crea actiuni si elabora politici sau legi prin care sa putem construi spatii publice sigure pentru toata lumea.
-
+    <string name="main_help_content_title">Despre aplicatia "Obiecte pierdute"</string>
+    <string name="main_help_content" tools:ignore="StringEscaping">\t\t\tAplicatia <b>Obiecte Pierdute</b> este o baza de date a obiectelor pierdute sau gasite din Bucuresti.
+    </string>
+    <string name="main_help_content2" tools:ignore="StringEscaping">\t\t\tOdata introduse detalii despre obiectul pierdut/gasit vei fii contactat pe mail sau telefonic de proprietar sau de cel care a gasit obiectul pierdut de tine
+    </string>
+    <string name="main_help_content3" tools:ignore="StringEscaping">\t\t\tCampurile pentru telefon si email sunt obligatorii pentru a descuraja farsele.Datele dumneavoastra nu vor fi furnizate nimanui!
     </string>
 
     <!-- Example settings for Notifications -->
-    <string name="pref_header_notifications">Notificari</string>
 
-    <string name="pref_title_new_message_notifications">Anuntare noi evenimente</string>
-
-    <string name="pref_title_ringtone">Ton de notificare</string>
-    <string name="pref_ringtone_silent">Silentios</string>
-
-    <string name="pref_title_vibrate">Vibrare</string>
-    <string name="title_activity_view_reports_map">Harta hartuiri</string>
-    <string name="title_activity_report_harassment">Raporteaza hartuirea</string>
+    <string name="title_activity_view_reports_map">Harta obiecte</string>
+    <string name="title_activity_report_harassment">Raporteaza obiect pierdut/gasit</string>
 
     <string name="action_settings">Setari</string>
-    <string name="title_activity_view_reports">Vezi cazuri de hartuire</string>
+    <string name="title_activity_view_reports">Vezi obiecte pierdute/gasite</string>
     <string name="title_activity_contact_us">Contacteaza-ne!</string>
 
     <string name="harassment_prompt">Alege tipul de hartuire</string>
