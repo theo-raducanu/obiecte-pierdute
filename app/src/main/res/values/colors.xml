@@ -5,4 +5,8 @@
     <color name="colorAccent">#FF4081</color>
     <color name="Albastru">#0012b4</color>
     <color name="Black">#000000</color>
+    <color name="Verde">#2fbc63</color>
+    <color name="Alb">#ffffff</color>
+    <color name="Red">#ff0000</color>
+    <color name="Bleu">#1d9acb</color>
 </resources>
