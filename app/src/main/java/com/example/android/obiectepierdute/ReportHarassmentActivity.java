@@ -149,12 +149,6 @@ public class ReportHarassmentActivity extends AppCompatActivity
         } else if (id == R.id.nav_view_reports_map) {
             Intent page = new Intent(this, ViewReportsMapActivity.class);
             startActivity(page);
-        } else if (id == R.id.nav_config) {
-            Intent page = new Intent(this, DataConfigActivity.class);
-            startActivity(page);
-        } else if (id == R.id.nav_contact) {
-            Intent page = new Intent(this, ContactUsActivity.class);
-            startActivity(page);
         } else if (id == R.id.nav_about_us) {
             Intent page = new Intent(this, HelpMainActivity.class);
             startActivity(page);
