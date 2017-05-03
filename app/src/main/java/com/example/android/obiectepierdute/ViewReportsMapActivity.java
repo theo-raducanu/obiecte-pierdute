@@ -31,7 +31,12 @@ public class ViewReportsMapActivity extends AppCompatActivity {
 }*/
 
 import android.os.AsyncTask;
+import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
+import android.view.View;
+import android.view.WindowInsets;
+import android.widget.FrameLayout;
+import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -40,13 +45,6 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
-
-import android.os.Bundle;
-import android.util.Log;
-import android.view.View;
-import android.view.WindowInsets;
-import android.widget.FrameLayout;
-import android.widget.Toast;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -173,7 +171,7 @@ public class ViewReportsMapActivity extends FragmentActivity implements OnMapRea
                 .title("Sydney Opera House"));*/
 
         // Move the camera to show the marker.
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(BUCHAREST, 10));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(BUCHAREST, 11));
         try {
             retrieveAndAddCities();
         } catch (IOException e) {

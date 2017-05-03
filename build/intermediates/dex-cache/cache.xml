@@ -3,26 +3,21 @@
 
     <item
         is-multidex="true"
-        jar="C:\Users\Andreea\AndroidStudioProjects\obiecte-pierdute\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jar="D:\Git\obiecte-pierdute\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
         sha1="510aa6efc159983dfbffa676a0dae37568c0a46f">
-        <dex dex="C:\Users\Andreea\AndroidStudioProjects\obiecte-pierdute\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_d8ab954caa5f79bfad886e80d423f4a92b79e321\classes.dex" />
+        <dex dex="D:\Git\obiecte-pierdute\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_67d150534dd143f06149193784f1047cf889dd1a\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\Andreea\AndroidStudioProjects\obiecte-pierdute\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jar="D:\Git\obiecte-pierdute\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-<<<<<<< HEAD
-        sha1="a8373d096c5bfc2c3393f745f830426227a82c32">
+        sha1="4ed9344a0c8d7110b5af6d1eb67ee385593f70d9">
         <dex dex="D:\Git\obiecte-pierdute\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_f1cafe5c47b7fb96f7f90e3b8c3c5fe498b7a491\classes.dex" />
-=======
-        sha1="e1b9f349db166962fcb062fd8c9b6ec6e0f5b320">
-        <dex dex="C:\Users\Andreea\AndroidStudioProjects\obiecte-pierdute\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_dd82378e70e2861ac7d35b004ae5a0cd96cddb87\classes.dex" />
->>>>>>> 253fd9bdf5ef25b4e4aeac51818ba46f5b42771a
     </item>
 
 </items>

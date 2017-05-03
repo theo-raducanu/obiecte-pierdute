@@ -1,6 +1,7 @@
 package com.example.android.obiectepierdute;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -55,13 +56,15 @@ public class ReportAdapter extends ArrayAdapter {
         } else {
             reportHolder= (ReportHolder) row.getTag();
         }
-
         Report report= (Report) this.getItem(position);
         /*reportHolder.tx_nume.setText(report.getNume());*/
         reportHolder.tx_tip_obj.setText(report.getTip());
         reportHolder.tx_obiect.setText(report.getObiect());
         reportHolder.tx_descriere.setText(report.getDescriere());
         reportHolder.tx_locatie.setText(report.getLocatie());
+        if ( report.getTip().equals("Obiect gasit") && position != 1 ) {
+            reportHolder.tx_tip_obj.setTextColor(Color.parseColor("#42f459"));
+        }
         /*reportHolder.tx_email.setText(report.getEmail());*/
         /*reportHolder.tx_nr_tel.setText(report.getNrTel());*/
         return row;
